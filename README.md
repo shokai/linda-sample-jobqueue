@@ -3,7 +3,7 @@ Linda Sample Job-Queue
 Job-Queue sample app on RocketIO::Linda
 
 * https://github.com/shokai/linda-sample-jobqueue
-* http://shokai.github.com/linda-sample-jobqueue
+* http://shokai.github.io/linda-sample-jobqueue
 
 
 Dependencies
