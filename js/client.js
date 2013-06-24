@@ -22,14 +22,18 @@ $(function(){
       );
     }
   });
-  $("#btn_random").click(calc.random);
-  calc.random();
+  $("#tasknum").change(function(){
+    calc.random($("#tasknum").val());
+  });
+  calc.random(15);
 })
 
 var calc = (new function(){
-  this.random = function(){
+  this.random = function(num){
+    if(typeof num === "string" && num.match(/^\d+$/)) num = Number(num);
+    if(typeof num !== "number") num = 15;
     var tasks = [];
-    for(var i = 0; i < 15; i++){
+    for(var i = 0; i < num; i++){
       tasks.push(
         [i, "+", random_num(), random_ops(), random_num(), random_ops(), random_num()].join(" ")
       );
