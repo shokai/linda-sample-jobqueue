@@ -9,14 +9,16 @@
     <div id="content">
       <div id="header">
         <h1>linda sample job-queue</h1>
-        <div id="status"></div>
+        タスクを分割・分散処理できるジョブキューのサンプル。<a href="http://shokai.org/blog/archives/7515">Linda RocketIO</a>を使う事でHTML+JavaScriptだけで分散処理できる。
       </div>
       <div id="main">
         <p>
-          <a href="./worker.html">worker</a>
+          <h2><a href="./client.html" target="_blank">Client</a></h2>
+          数式の評価をWorker(達)にリクエストするクライアント。
         </p>
         <p>
-          <a href="./client.html">client</a>
+          <h2><a href="./worker.html" target="_blank">Worker</a></h2>
+          Clientから受信した数式を評価して結果を返すWorker。Workerを複数開くと、Clientからのリクエストが分散処理されます。2、３個ブラウザを開いてみてください。
         </p>
         <div id="footer">
           <hr>
